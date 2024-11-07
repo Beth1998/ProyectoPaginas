@@ -6,9 +6,6 @@ const botonRegresar2 = document.getElementById('botonRegresar2');
 const inicio = document.getElementById('inicio');
 const pagina1 = document.getElementById('pagina1');
 const pagina2 = document.getElementById('pagina2');
-const header1 = document.getElementById('.header1');
-const footer1 = document.getElementById('.footer1')
-const main1 = document.getElementById('main1')
 
 // Función para ir a una página específica
 function irAPagina(paginaInicio) {
@@ -16,7 +13,6 @@ function irAPagina(paginaInicio) {
     inicio.classList.add('oculta');
     pagina1.classList.add('oculta');
     pagina2.classList.add('oculta');
-    
     
     // Mostrar la página seleccionada
     document.getElementById(paginaInicio).classList.remove('oculta');

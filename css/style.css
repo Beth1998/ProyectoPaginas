@@ -1,102 +1,124 @@
+/* Estilo global para el body */
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
     background-color: #cbcbf0;
+    display: flex;  /* Cambiado a flex para que el contenido pueda distribuirse en columna */
+    flex-direction: column;  /* Los elementos hijos se colocan en una columna */
+    min-height: 100vh;  /* Asegura que el body ocupe al menos el 100% de la altura de la pantalla */
 }
 
-header{
+/* Header fijo */
+#header1 {
     position: fixed;
     top: 0;
     width: 100%;
     padding: 0;
-    nav{
-        padding: 5px;
-        background-color: rgb(255, 0, 128);
-        ul{
-            display: flex;
-            justify-content: end;
-            li{
-                padding: 2%;
-                list-style-type: none;
-                a{
-                    text-decoration: none;
-                    transition: all 0.8s;
-                    color: white;
-                }
-                a:hover{
-                    color: rgb(73, 26, 57);
-                }
-            }
-        }
-    }
+    z-index: 10;  /* Asegura que el header esté por encima del contenido */
 }
 
-/* Footer de la página 1 */
+#header1 nav {
+    padding: 5px;
+    background-color: rgb(255, 0, 128);
+}
+
+#header1 nav ul {
+    display: flex;
+    justify-content: end;
+}
+
+#header1 nav ul li {
+    padding: 2%;
+    list-style-type: none;
+}
+
+#header1 nav ul li a {
+    text-decoration: none;
+    transition: all 0.8s;
+    color: white;
+}
+
+#header1 nav ul li a:hover {
+    color: rgb(73, 26, 57);
+}
+
+/* Contenedor principal que envuelve todo el contenido */
+#contenido {
+    text-align: center;
+    display: flex;
+    flex-direction: column;  /* Coloca los elementos en columna */
+    flex-grow: 1;  /* Asegura que el contenido ocupe el espacio disponible */
+    padding-top: 60px;  /* Da espacio para que no se solape con el header fijo */
+}
+
+/* Estilo del footer */
 .footer1 {
-    background-color: #2c3e50; /* Fondo oscuro */
-    color: white; /* Texto blanco */
-    padding: 20px 0; /* Espaciado interno */
-    text-align: center; /* Alineación centrada */
-    position: relative;
-    bottom: 0;
+    position: absolute;
+    bottom: 0;  /* Pegado al fondo del contenedor */
+    background-color: #2c3e50;  /* Fondo oscuro */
+    color: white;  /* Texto blanco */
     width: 100%;
-    p {
-        margin: 0;
-        font-size: 14px;
-        text-align:left;
-    }
-    nav{
-        padding: 5px;
-        ul{
-            display: flex;
-            justify-content:center;
-            li{
-                padding: 2%;
-                list-style-type: none;
-                a{
-                    text-decoration: none;
-                    transition: all 0.8s;
-                    color: white;
-                }
-                a:hover{
-                    color: rgb(133, 57, 110);
-                }
-            }
-        }
-    }
+    display: flex;
+    justify-content:end;  /* Centra los elementos en el footer */
+    align-items: center;  /* Centra los elementos verticalmente */
+    padding: 30px 0;  /* Padding arriba y abajo */
+    margin-top: auto;  /* Empuja el footer al fondo */
 }
 
+.footer1 p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer1 nav {
+    padding: 5px;
+}
+
+.footer1 nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;  /* Elimina el margen extra de la lista */
+}
+
+.footer1 nav ul li {
+    padding: 5px;
+    list-style-type: none;
+}
+
+.footer1 nav ul li a {
+    text-decoration: none;
+    transition: all 0.8s;
+    color: white;
+}
+
+.footer1 nav ul li a:hover {
+    color: rgb(133, 57, 110);
+}
 
 .footer1 button {
-    background-color: #3498db; /* Fondo azul */
-    color: white; /* Texto blanco */
+    position: absolute;
+    bottom: 0;  /* Pegado al fondo del contenedor */
+    left: 0;  /* Pegado al borde izquierdo del contenedor */
+    background-color: #3498db;  /* Fondo azul */
+    color: white;  /* Texto blanco */
     border: none;
-    padding: 10px 20px;
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;  
 }
 
 .footer1 button:hover {
-    background-color: #2980b9; /* Azul más oscuro cuando se pasa el ratón */
+    background-color: #2980b9;  /* Azul más oscuro cuando se pasa el ratón */
 }
 
-/* Estilo de márgenes para separar el contenido de la página y el footer */
-main {
-    margin-bottom: 100px; /* Espacio para el footer */
+/* Main contenido de la página 1 */
+#main1 {
+    margin: 100px 50px 100px 50px;
+    flex-grow: 1;  /* Hace que el main ocupe todo el espacio disponible */
 }
 
-
-
-#contenido {
-    text-align: center;
-}
-
+/* Botones generales */
 button {
     padding: 10px 20px;
     margin: 10px;
@@ -113,6 +135,7 @@ button:hover {
     background-color: #0056b3;
 }
 
+/* Clase oculta para ocultar el contenido de la página */
 .oculta {
     display: none;
 }
