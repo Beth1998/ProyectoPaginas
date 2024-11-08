@@ -51,7 +51,7 @@ body {
     padding-top: 60px;  /* Da espacio para que no se solape con el header fijo */
 }
 
-/* Estilo del footer */
+/* Estilo del footer1 */
 .footer1 {
     position: absolute;
     bottom: 0;  /* Pegado al fondo del contenedor */
@@ -112,18 +112,83 @@ body {
     background-color: #2980b9;  /* Azul más oscuro cuando se pasa el ratón */
 }
 
+/* Estilo del footer2 */
+.footer2 {
+    position: absolute;
+    bottom: 0;  /* Pegado al fondo del contenedor */
+    background-color: #2c3e50;  /* Fondo oscuro */
+    color: white;  /* Texto blanco */
+    width: 100%;
+    justify-content:end;  /* Centra los elementos en el footer */
+    align-items: center;  /* Centra los elementos verticalmente */
+    padding: 30px 0;  /* Padding arriba y abajo */
+    margin-top: auto;  /* Empuja el footer al fondo */
+}
+
+.footer2 p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer2 nav {
+    padding: 5px;
+}
+
+.footer2 nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;  /* Elimina el margen extra de la lista */
+}
+
+.footer2 nav ul li {
+    padding: 5px;
+    list-style-type: none;
+}
+
+.footer2 nav ul li a {
+    text-decoration: none;
+    transition: all 0.8s;
+    color: white;
+}
+
+.footer2 nav ul li a:hover {
+    color: rgb(133, 57, 110);
+}
+
+.footer2 button {
+    bottom: 0;  /* Pegado al fondo del contenedor */
+    justify-content: center;
+    background-color: #3498db;  /* Fondo azul */
+    color: white;  /* Texto blanco */
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;  
+}
+
+.footer2 button:hover {
+    background-color: #2980b9;  /* Azul más oscuro cuando se pasa el ratón */
+}
+
 /* Main contenido de la página 1 */
 #main1 {
     margin: 100px 50px 100px 50px;
     flex-grow: 1;  /* Hace que el main ocupe todo el espacio disponible */
 }
 
+/* Main contenido de la página 2 */
 #main2 {
     margin: 100px 50px 100px 50px;
     flex-grow: 1;  /* Hace que el main ocupe todo el espacio disponible */
     display: flex;
     flex-direction: row;
-    padding: 20px;
+    text-align:justify;
+    margin-bottom: 80px;
+    h1{
+        text-align: left;
+        margin: 15px 0 0 0;
+    }
 
 }
 
