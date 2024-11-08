@@ -118,6 +118,15 @@ body {
     flex-grow: 1;  /* Hace que el main ocupe todo el espacio disponible */
 }
 
+#main2 {
+    margin: 100px 50px 100px 50px;
+    flex-grow: 1;  /* Hace que el main ocupe todo el espacio disponible */
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+
+}
+
 /* Botones generales */
 button {
     padding: 10px 20px;
